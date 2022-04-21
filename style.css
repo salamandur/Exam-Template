@@ -1,10 +1,14 @@
+
 body{
-  display:flex;
+/*   display:flex; */
   background-color: antiquewhite;
   overflow-x: scroll;
   padding: 0em;
   margin: 0px;
-  flex-direction: row; 
+/*   flex-direction: column;  */
+  display:grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 2fr 8fr;
 }
 ul{
   color: #8959e3;
@@ -14,7 +18,7 @@ strong{
   font-size: 35px;
   font-family: "Arial";
 }
-nav{
+header{
   background-color: #8959e3;
   box-shadow: 0 5px 5px 0 rgb(188, 159, 224);
   position: fixed;
@@ -23,6 +27,8 @@ nav{
   top:0;
   right:0;
   left:0;
+  grid-column: span 2;
+/*   flex-grow: 1; */
 }
 #srch{
   background-color: #d9c8ea;
@@ -68,12 +74,42 @@ input [placeholder]{
 .btn:hover{
   background-color: #cd93ec;
 }
+/* .col{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  flex-grow: 8;
+} */
 aside{
-  margin-top: 5em; 
+  margin-top: 5.75em; 
+  width: 200px;
   padding: 2em; 
   position: fixed;
   background-color: #cd93ec;
   color: black;
   font-weight: bold;
   height: 100vh;
+}
+/* .grids{
+  grid-template-column: 2fr 8fr;
+  
+} */
+.card{
+  height: 500px;
+  width: 300px;
+  background-color: black;
+  margin: 10px;
+  color: white;
+}
+main{
+  margin-top: 5.75em;
+  position: absolute;
+  right: 0;
+/*   width: 800px; */
+  left: 25%;
+  right: 75%;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
