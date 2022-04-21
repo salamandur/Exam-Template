@@ -2,13 +2,13 @@
 body{
 /*   display:flex; */
   background-color: antiquewhite;
-/*   overflow-y: scroll; */
+  overflow-x: scroll;
   padding: 0em;
   margin: 0px;
   display:flex;
   flex-direction: row;
   overflow-x: scroll;
-  flex: nowrap;
+/*   flex: nowrap; */
 /*   flex-direction: column;  */
 /*   display:grid; */
 /*   grid-template-rows: 1fr 8fr;
@@ -101,7 +101,7 @@ footer{
 } */
 aside{
   margin-top: 5.75em; 
-  width: 200px;
+/*   width: 200px; */
   padding: 2em; 
   position: fixed;
   background-color: #cd93ec;
@@ -146,12 +146,11 @@ main{
   main{
     display:flex;
     flex-direction: column;
-    
+    left: 50%;
 /*     left: %; */
   }
   .card{
-    position: absolute;
-    right: 50%;
+    display:inline;
   }
   aside{
     display: flex;
