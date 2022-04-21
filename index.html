@@ -1,16 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <title></title>
 </head>
-
+  
+<style>
+  
+</style>
+  
 <body>
-  Hello world
-
+  <header>
+    <nav>
+      <ul>
+        <li><strong>Title of Website</strong></li>
+        <li>
+          <div>
+<!--             <span class="options"><button class="btn"><a href="#">Button1</a></button> -->
+<!--             <button class="btn"><a href="#">Button2</a></button></span> -->
+            <span class="search"><input id="srch" type="text" placeholder="Search.." name="search">
+            <button id="searchSubmit"type="submit">Submit</button></span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <aside>
+      This is the aside
+      hello
+      hi
+      where
+      are
+      yo
+      u
+      v
+      s
+      vr
+      vkslv
+    </aside>
+  <main>
+    
+  </main>
+  <footer>
+    
+  </footer>
 </body>
+  
+<script>
+  //get data from api
+  async function getData(url){
+    try{
+      let response = await fetch(url);//1. Send http request and get response
+      let result = await response.json();//2. Get data from response
+      showList(result);// 3. Do something with the data
+    }catch(e){
+      console.log(e);//catch and log any errors
+    }
+  }
 
-</html>
+  let pokemons = getData("");
+  
+  //get data based on parameter
+  async function getPokemon(id){
+    try {
+      let response = await fetch(`https://pokedextr-api.herokuapp.com/pokemon/${id}`); //makes a request to the pokemon listing API url
+      let pokemon = await response.json(); 
+      displayPokemon(pokemon); //gets the data from the request and sends it to displayPokemon()
+    }
+    catch(e){
+      console.log(e); //catch and log any errors
+    } 
+  }
+  
+  //receives an array of pokemon objects and displays it on the page in #listing
+  function showList(pokemons){
+    let listing = document.querySelector("#listing");
+    let html = '';
+    for(let pokemon of pokemons){
+        html+=`<ul class="collection-item">${pokemon.name}</ul>
+          <ul> <a class="collection-item" id = '${pokemon.name}' href = "#result" onclick="getPokemon(${pokemon.pid})"></a></ul>`
+    }
+    listing.innerHTML = html;
+    listing.style.color = 'teal';
+  }
+  
+  function displayPokemon(pokemon){
+    //receives a pokemon object and displays its data on the page in #result
+      let result = document.querySelector("#result");
+      let html = '';
+      html+= `<div id="pokemon-detail" class="card col m12 l10 offset-l1" style="margin-top: 20px"><div class="card-image" >
+      <img class="teal" src="${pokemon.image}" alt = "${pokemon.name} Image"></div>
+      <div class="card-content">
+      <span class="card-title"><p>${pokemon.name} # ${pokemon.pid}</p></span>
+      <p class = "card-content">Type1: ${pokemon.type1}</p>
+      <p class = "card-content">Weight: ${pokemon.weight}</p>
+      <p class = "card-content">Height: ${pokemon.height}</p>
+      <a id="catchBtn" class="" href="${pokemon.pid}" style="position:absolute; right:15px; bottom:80px" onclick="catchPokemon('${pokemon.pid}')"><span class="" style="font-size:40px; margin-top:8px" data-inline="false"></span>
+      </a></div></div>`
+      result.innerHTML = html;
+  }
+
+function search(x) {
+  
+}
+
+function filterBy(x){
+  
+}
+  
+function sortBy(x){
+  
+}
+</script>

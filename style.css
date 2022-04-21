@@ -1,0 +1,79 @@
+body{
+  display:flex;
+  background-color: antiquewhite;
+  overflow-x: scroll;
+  padding: 0em;
+  margin: 0px;
+  flex-direction: row; 
+}
+ul{
+  color: #8959e3;
+}
+strong{
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-family: "Arial";
+}
+nav{
+  background-color: #8959e3;
+  box-shadow: 0 5px 5px 0 rgb(188, 159, 224);
+  position: fixed;
+  width: 100;
+  margin: 0;
+  top:0;
+  right:0;
+  left:0;
+}
+#srch{
+  background-color: #d9c8ea;
+/*   box-shadow: 1px 0px 5px 1px antiquewhite; */
+  border: 1px solid antiquewhite;
+  font-size: 15px;
+  padding: 5px;
+  width: 250px;
+  border-right: 0px;
+}
+
+#searchSubmit{
+  font-size: 15px;
+  padding: 5px;
+  float:right;
+  background-color: #d4b0e8;
+  border: 1px solid #cd93ec;
+  box-shadow: 0px 0px 2px 1px antiquewhite;
+}
+#searchSubmit:hover{
+  background-color: #cd93ec;
+/*   border-color: #d4b0e8; */
+/*   box-shadow: 0px 0px 2px 1px #d4b0e8; */
+}
+.search{
+  float:right;
+  margin-right: 3vw;
+}
+input [placeholder]{
+  color: black;
+}
+.btn{
+  font-size: 15px;
+  padding: 5px;
+  float:right;
+  background-color: #d4b0e8;
+  border: 1px solid #cd93ec;
+  box-shadow: 0px 0px 2px 1px antiquewhite;
+}
+.btn a{
+  font-size: 15px;
+}
+.btn:hover{
+  background-color: #cd93ec;
+}
+aside{
+  margin-top: 5em; 
+  padding: 2em; 
+  position: fixed;
+  background-color: #cd93ec;
+  color: black;
+  font-weight: bold;
+  height: 100vh;
+}
