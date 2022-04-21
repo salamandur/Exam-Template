@@ -8,6 +8,7 @@ body{
   display:flex;
   flex-direction: row;
   overflow-x: scroll;
+  flex: nowrap;
 /*   flex-direction: column;  */
 /*   display:grid; */
 /*   grid-template-rows: 1fr 8fr;
@@ -103,11 +104,10 @@ aside{
   width: 200px;
   padding: 2em; 
   position: fixed;
-  display:flex;
   background-color: #cd93ec;
   color: black;
   font-weight: bold;
-/*   height: 100; */
+  height: 100vh;
 }
 /* .grids{
   grid-template-column: 2fr 8fr;
@@ -144,16 +144,25 @@ main{
 }
 @media screen and (max-width: 930px) {
   main{
-    grid-template-columns: 1fr;
-    left: 45%;
+    display:flex;
+    flex-direction: column;
+    
+/*     left: %; */
+  }
+  .card{
+    position: absolute;
+    right: 50%;
+  }
+  aside{
+    display: flex;
+    flex-direction: column;
   }
 }
-@media screen and (max-width: 604px) {
+/* @media screen and (max-width: 604px) {
   main{
-    grid-template-columns: 1fr;
-    left: 45%;
+    display:flex;
   }
   .search{
     width:100%;
   }
-}
+} */
