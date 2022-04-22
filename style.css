@@ -15,7 +15,7 @@ body{
   grid-template-columns: 2fr 8fr; */
 }
 ul{
-  color: #8959e3;
+  color: #ffae00;
 }
 strong{
   color: rgb(255, 255, 255);
@@ -23,7 +23,7 @@ strong{
   font-family: "Arial";
 }
 header{
-  background-color: #8959e3;
+  background-color: #ffae00;
   box-shadow: 0 5px 5px 0 rgb(188, 159, 224);
   position: fixed;
   width: 100;
@@ -36,7 +36,7 @@ header{
 /*   flex-grow: 1; */
 }
 footer{
-  background-color: #8959e3;
+  background-color: #ffae00;
   box-shadow: 0 5px 5px 0 rgb(188, 159, 224);
   position: fixed;
   width: 100;
@@ -66,7 +66,7 @@ footer{
   padding: 5px;
   right: 2%;
   background-color: #d4b0e8;
-  border: 1px solid #cd93ec;
+  border: 1px solid #ecd993;
   box-shadow: 0px 0px 2px 1px antiquewhite;
 }
 #searchSubmit:hover{
@@ -81,16 +81,18 @@ footer{
 .btn{
   font-size: 15px;
   padding: 5px;
-  float:right;
-  background-color: #d4b0e8;
-  border: 1px solid #cd93ec;
+  background-color: #e8e6b0;
+  border: 1px solid #ecc293;
   box-shadow: 0px 0px 2px 1px antiquewhite;
+}
+.options{
+  
 }
 .btn a{
   font-size: 15px;
 }
 .btn:hover{
-  background-color: #cd93ec;
+  background-color: #ecc293;
 }
 /* .col{
   display: flex;
@@ -100,14 +102,16 @@ footer{
   flex-grow: 8;
 } */
 aside{
-  margin-top: 5.75em; 
+  margin-top: 6em; 
 /*   width: 200px; */
   padding: 2em; 
   position: fixed;
-  background-color: #cd93ec;
-  color: black;
+  background-color: #ecd993;
   font-weight: bold;
   height: 100vh;
+  font-size: 15px;
+  overflow-y: scroll;
+  width: 200px;
 }
 /* .grids{
   grid-template-column: 2fr 8fr;
@@ -116,12 +120,12 @@ aside{
 .card{
   height: 500px;
   width: 300px;
-  background-color: black;
+  background-color: #554e4e;
   margin: 10px;
   color: white;
 }
 main{
-  margin-top: 5.75em;
+  margin-top: 8em;
 /*   margin-left: 265px; */
 /*   display:inline; */
   position: absolute;
@@ -133,7 +137,7 @@ main{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: auto;
-  border: 3px solid blue;
+  overflow-y: scroll;
   z-index: -1;
 }
 @media screen and (max-width: 1230px) {
@@ -157,11 +161,10 @@ main{
     flex-direction: column;
   }
 }
-/* @media screen and (max-width: 604px) {
-  main{
-    display:flex;
-  }
-  .search{
-    width:100%;
-  }
-} */
+.card-image{
+  width: 100%;
+}
+#recipe{
+  width: 600;
+  overflow: scroll;
+}

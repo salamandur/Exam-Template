@@ -6,57 +6,207 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-  <title></title>
+  <title>In The Brew </title>
+  <style>
+
+body{
+/*   display:flex; */
+  background-color: antiquewhite;
+  overflow-x: scroll;
+  padding: 0em;
+  margin: 0px;
+  display:flex;
+  flex-direction: row;
+  overflow-x: scroll;
+/*   flex: nowrap; */
+/*   flex-direction: column;  */
+/*   display:grid; */
+/*   grid-template-rows: 1fr 8fr;
+  grid-template-columns: 2fr 8fr; */
+}
+ul{
+  color: #ffae00;
+}
+strong{
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-family: "Arial";
+}
+header{
+  background-color: #ffae00;
+  box-shadow: 0 5px 5px 0 rgb(188, 159, 224);
+  position: fixed;
+  width: 100;
+  margin: 0;
+  top:0;
+  right:0;
+  left:0;
+  
+/*   grid-column: span 2; */
+/*   flex-grow: 1; */
+}
+footer{
+  background-color: #ffae00;
+  box-shadow: 0 5px 5px 0 rgb(188, 159, 224);
+  position: fixed;
+  width: 100;
+  height: 10px;
+  margin: 0;
+  right:0;
+  left:0;
+  bottom: 0;
+/*   grid-column: span 2; */
+/*   flex-grow: 1; */
+}
+#srch{
+  background-color: #d9c8ea;
+/*   box-shadow: 1px 0px 5px 1px antiquewhite; */
+  border: 1px solid antiquewhite;
+  font-size: 15px;
+  padding: 5px;
+  width: 250px;
+  position:absolute;
+  right: 4%;
+  border-right: 0px;
+}
+
+#searchSubmit{
+  position: absolute;
+  font-size: 15px;
+  padding: 5px;
+  right: 2%;
+  background-color: #d4b0e8;
+  border: 1px solid #ecd993;
+  box-shadow: 0px 0px 2px 1px antiquewhite;
+}
+#searchSubmit:hover{
+  background-color: #cd93ec;
+/*   border-color: #d4b0e8; */
+/*   box-shadow: 0px 0px 2px 1px #d4b0e8; */
+}
+.search{
+  float:right;
+  margin-right: 3vw;
+}
+.btn{
+  font-size: 15px;
+  padding: 5px;
+  background-color: #e8e6b0;
+  border: 1px solid #ecc293;
+  color: black;
+  box-shadow: 0px 0px 2px 1px antiquewhite;
+}
+.options{
+  
+}
+.btn a{
+  font-size: 15px;
+}
+.btn:hover{
+  background-color: #ecc293;
+}
+/* .col{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  flex-grow: 8;
+} */
+aside{
+  margin-top: 6em; 
+/*   width: 200px; */
+  padding: 2em; 
+  position: fixed;
+  background-color: #ecd993;
+  font-weight: bold;
+  height: 100vh;
+  font-size: 15px;
+  overflow-y: scroll;
+  width: 200px;
+}
+/* .grids{
+  grid-template-column: 2fr 8fr;
+  
+} */
+.card{
+  height: 500px;
+  width: 300px;
+  background-color: #554e4e;
+  margin: 10px;
+  color: white;
+}
+main{
+  margin-top: 8em;
+/*   margin-left: 265px; */
+/*   display:inline; */
+  position: absolute;
+/*   clip: 265px; */
+/*   width: 800px; */
+/*   float: right; */
+  left: 21%;
+  right: 0;
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: auto;
+  overflow-y: scroll;
+  z-index: -1;
+}
+@media screen and (max-width: 1230px) {
+  main{
+    grid-template-columns: 1fr 2fr;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 930px) {
+  main{
+    display:flex;
+    flex-direction: column;
+    left: 50%;
+/*     left: %; */
+  }
+  .card{
+    display:inline;
+  }
+  aside{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.card-image{
+  width: 100%;
+}
+#recipe{
+  width: 600;
+  overflow: scroll;
+}
+  </style>
 </head>
 
-<style>
 
-</style>
 
-<body>
+<body onload="message()">
 
   <header>
     <nav>
       <ul>
-        <li><strong>Title of Website</strong></li>
+        <li><strong>In The Brew </strong></li>
         <li>
           <div>
-            <!--             <span class="options"><button class="btn"><a href="#">Button1</a></button> -->
-            <!--             <button class="btn"><a href="#">Button2</a></button></span> -->
-            <span class="search"><input id="srch" type="text" placeholder="Search.." name="search">
-              <button id="searchSubmit" type="submit">Submit</button></span>
+            <!--             </span> -->
+<!--             <span class="search"><input id="srch" type="text" placeholder="Search.." name="search">
+              <button id="searchSubmit" type="submit">Submit</button></span> -->
           </div>
         </li>
       </ul>
     </nav>
   </header>
   <!--   <div class="grids row"> -->
-  <aside class=col>
-    This is the aside.
+  <aside id="listing">
     <!--Put something here s'il tu plait. -->
   </aside>
-  <main>
-    <div class="card">
-      1
-    </div>
-    <div class="card">
-      2
-    </div>
-    <div class="card">
-      3
-    </div>
-    <div class="card">
-      4
-    </div>
-    <div class="card">
-      5
-    </div>
-    <div class="card">
-      6
-    </div>
-    <div class="card">
-      7
-    </div>
+  <main id="results">
+    <div class="card" id="result"></div>
+    <div class="card" id="recipe"></div>
   </main>
   <!--   </div> -->
 
@@ -77,57 +227,92 @@
     }
   }
 
-  let pokemons = getData("");
+  let beers = getData("https://api.punkapi.com/v2/beers");
+    //receives an array of beers and displays it on the page in #listing
+  function showList(beers) {
+    let listing = document.querySelector("#listing");
+    let html = '';
+    for (let beer of beers) {
+      html += `
+          <ul><a<input type="button" onclick="getbeer(${beer.id})"/>${beer.name}</a></ul><hr>`
+    }
+    listing.innerHTML = html;
+  }
 
+  //displays beer details
+  function displayOverview(beer) {
+    let result = document.querySelector("#result");
+    let html = '';
+    html += `<img src="${beer.image_url}" alt = "${beer.name} Image">
+      <span><p>${beer.name} #${beer.id}</p></span>
+      <p>${beer.tagline}</p>
+<p>ABV: ${beer.abv}</p>
+<p>IBU: ${beer.ibu}</p>
+<p>pH: ${beer.ph}</p>
+      <p>Description: ${beer.description}</p>
+      <p>Food Pairing: ${beer.food_pairing}</p><ol>`;
+    // for(let p of beer.food_pairing){
+    //   html+=`<li>p</li>`;
+    // }
+    html+=`</ol>
+      <p>Credits: ${beer.contributed_by}</p>
+      <a<input type="button" class="btn" onclick="displayRecipe(${beer})"/>Get Recipe</a>`;
+    result.innerHTML = html;
+  }
+ 
   //get data based on parameter
-  async function getPokemon(id) {
+  async function getbeer(id) {
     try {
-      let response = await fetch(`https://pokedextr-api.herokuapp.com/pokemon/${id}`); //makes a request to the pokemon listing API url
-      let pokemon = await response.json();
-      displayPokemon(pokemon); //gets the data from the request and sends it to displayPokemon()
+      let response = await fetch(`https://api.punkapi.com/v2/beers/${id}`); //makes a request to the pokemon listing API url
+      let beer = await response.json();
+      displayOverview(beer); 
+      console.log(beer);
     }
     catch (e) {
       console.log(e); //catch and log any errors
     }
   }
 
-  //receives an array of pokemon objects and displays it on the page in #listing
-  function showList(pokemons) {
-    let listing = document.querySelector("#listing");
+  function displayRecipe(beer) {
+    let listing = document.querySelector("#recipe");
     let html = '';
-    for (let pokemon of pokemons) {
-      html += `<ul class="collection-item">${pokemon.name}</ul>
-          <ul> <a class="collection-item" id = '${pokemon.name}' href = "#result" onclick="getPokemon(${pokemon.pid})"></a></ul>`
+    html+=`<h3>Recipe</h3><br><p>Mash Directions: </p><ul>`;
+    for(let mt of beer.method.mash_temp){
+      html+=`<li>Temperature: ${mt.temp.value} °C</li><li>Duration: ${mt.duration}</li>`;
     }
-    listing.innerHTML = html;
-    listing.style.color = 'teal';
+    html+=`</ul><p>Yeast: ${beer.ingredients.yeast}</p><p>Malts</p>`;
+    let malts = beer.ingredients.malt;
+    for(let malt of malts){
+      html+=`<ul><li>${malt.name}: ${malt.amount.value}${malt.amount.unit} </li></ul>`;
+    }
+    let hops = beer.ingredients.hops;
+    html+=`<p>Hops</p><ol><li>Add at start:<li><ul>`;
+    for(let hop of hops){
+      if(hop.amount.add==="start")
+      {
+        html+=`<li>${hop.name}: ${hop.amount.value}${hop.amount.unit} </li>`;
+      }
+    }
+    html+=`</ul><li>Add at middle:<li><ul>`;
+    for(let hop of hops){
+      if(hop.amount.add==="middle")
+      {
+        html+=`<li>${hop.name}: ${hop.amount.value}${hop.amount.unit} </li>`;
+      }
+    } 
+    html+=`</ul><li>Add at end:<li><ul>`;
+    for(let hop of hops){
+      if(hop.amount.add==="end")
+      {
+        html+=`<li>${hop.name}: ${hop.amount.value}${hop.amount.unit} </li>`;
+      }
+    }
+    html+=`</ul></ol><p>Brewer's Tips: ${beer.brewers_tips}</p>`;
   }
 
-  function displayPokemon(pokemon) {
-    //receives a pokemon object and displays its data on the page in #result
-    let result = document.querySelector("#result");
-    let html = '';
-    html += `<div id="pokemon-detail" class="card col m12 l10 offset-l1" style="margin-top: 20px"><div class="card-image" >
-      <img class="teal" src="${pokemon.image}" alt = "${pokemon.name} Image"></div>
-      <div class="card-content">
-      <span class="card-title"><p>${pokemon.name} # ${pokemon.pid}</p></span>
-      <p class = "card-content">Type1: ${pokemon.type1}</p>
-      <p class = "card-content">Weight: ${pokemon.weight}</p>
-      <p class = "card-content">Height: ${pokemon.height}</p>
-      <a id="catchBtn" class="" href="${pokemon.pid}" style="position:absolute; right:15px; bottom:80px" onclick="catchPokemon('${pokemon.pid}')"><span class="" style="font-size:40px; margin-top:8px" data-inline="false"></span>
-      </a></div></div>`
-    result.innerHTML = html;
-  }
-
-  function search(x) {
-
-  }
-
-  function filterBy(x) {
-
-  }
-
-  function sortBy(x) {
-
-  }
+function message(){
+  alert("Hello! Welcome to In The Brew!");
+  alert("Click on a brew to get an overview");
+}
 </script>
+</html>
